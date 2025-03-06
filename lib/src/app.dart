@@ -1,3 +1,5 @@
+import 'package:count_state_manage/src/bloc/bloc_screen.dart';
+import 'package:count_state_manage/src/bloc/count_bloc.dart';
 import 'package:count_state_manage/src/cubit/count_cubit.dart';
 import 'package:count_state_manage/src/cubit/cubit_screen.dart';
 import 'package:count_state_manage/src/getx/count_getx_controller.dart';
@@ -41,7 +43,15 @@ class App extends StatelessWidget {
                       duration: Duration.zero);
                 },
                 child: Text('Add with Cubit')),
-            ElevatedButton(onPressed: () {}, child: Text('Add with Bloc'))
+            ElevatedButton(
+                onPressed: () {
+                  Get.to(
+                    BlocProvider(
+                        create: (context) => CountBloc(), child: BlocScreen()),
+                    duration: Duration.zero,
+                  );
+                },
+                child: Text('Add with Bloc'))
           ],
         ),
       ),
