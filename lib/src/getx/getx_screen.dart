@@ -9,7 +9,7 @@ class GetxScreen extends GetView<CountGetxController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('State Managment - GetX'),
+        title: Text('State Management - GetX'),
       ),
       body: Center(
         child: Obx(

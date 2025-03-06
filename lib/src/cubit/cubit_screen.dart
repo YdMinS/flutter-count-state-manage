@@ -9,7 +9,7 @@ class CubitScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('State Managment - Cubit'),
+        title: Text('State Management - Cubit'),
       ),
       body: Center(
         child: BlocBuilder<CountCubit, int>(builder: (context, state) {
